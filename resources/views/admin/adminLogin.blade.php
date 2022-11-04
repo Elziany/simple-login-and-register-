@@ -7,10 +7,10 @@
     <title>Login</title>
 </head>
 <body>
-<form method="post" action="{{route('login')}}">
+<form method="post" action="{{route('adminLogin')}}">
         @csrf
 
-        {{__('messages.email')}} : <input type="text" name="email"><br>
+         {{__('messages.email')}} : <input type="text" name="email"><br>
         {{__('messages.password')}} : <input type="password" name="password"><br>
 
         <button type="submit">{{__('messages.login')}}</button>

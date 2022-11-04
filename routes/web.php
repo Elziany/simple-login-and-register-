@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/registerpage',function()
 {
@@ -30,6 +30,14 @@ Route::get('/loginpage',function()
     return view('login');
 });
 
+Route::get('/loginadmin',function()
+{
+    return view('admin.adminLogin');
+});
+
 Route::post('/register',[App\Http\Controllers\UserController::class,'register'])->name('register');
 Route::post('/login',[App\Http\Controllers\UserController::class,'login'])->name('login');
+Route::post('/adminLogin',[App\Http\Controllers\AdminController::class,'adminLogin'])->name('adminLogin');
+Route::get('/changeLang/{locale}',[App\Http\Controllers\LangController::class,'changeLanguage'])->name('changeLang');
+
 

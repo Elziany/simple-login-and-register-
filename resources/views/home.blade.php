@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-welocme
-</body>
+<a href="{{route('changeLang','en')}}">English</a><br>
+<a href="{{route('changeLang','fr')}}">french</a><br>
+<a href="{{route('changeLang','ar')}}">االغة العربية</a><br>
+{{ __('messages.welcome') }}</body>
 </html>

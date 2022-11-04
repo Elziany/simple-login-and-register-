@@ -9,11 +9,12 @@
 <body>
     <form method="post" action="{{route('register')}}">
         @csrf
-     name:   <input type="text" name="name"><br>
-       email :  <input type="text" name="email"><br>
-      password :  <input type="password" name="password"><br>
-      confirm password:  <input type="password" name="repassword"><br>
-        <button type="submit">submit</button>
+        {{__('messages.name')}}:   <input type="text" name="name"><br>
+        {{__('messages.email')}} : <input type="text" name="email"><br>
+        {{__('messages.password')}} : <input type="password" name="password"><br>
+        {{__('messages.confirm')}}:  <input type="password" name="repassword"><br>
+
+        <button type="submit">{__('messages.register')}}</button>
     </form>
 
 </body>
