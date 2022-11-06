@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 
 class UserController extends Controller
 {
@@ -26,7 +27,7 @@ class UserController extends Controller
         ]);
 
 
-    return view('home');
+        return redirect(RouteServiceProvider::POSTS);
      }
      ##########################################################################
 
@@ -44,7 +45,7 @@ class UserController extends Controller
 
          if(Auth::attempt($credintials))
          {
-            return view('home');
+            return redirect(RouteServiceProvider::POSTS);
          }
          else{
             return back()->with('error','incorrect email or password');

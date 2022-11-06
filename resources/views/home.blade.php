@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>languages of the site</h1>
 <a href="{{route('changeLang','en')}}">English</a><br>
 <a href="{{route('changeLang','fr')}}">french</a><br>
 <a href="{{route('changeLang','ar')}}">االغة العربية</a><br>
 {{ __('messages.welcome') }}</body>
+<a href="{{route('loginpage')}}">Login page</a><br>
+<a href="{{route('registerpage')}}">register page</a><br>
+
 </html>

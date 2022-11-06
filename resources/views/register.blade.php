@@ -14,7 +14,7 @@
         {{__('messages.password')}} : <input type="password" name="password"><br>
         {{__('messages.confirm')}}:  <input type="password" name="repassword"><br>
 
-        <button type="submit">{__('messages.register')}}</button>
+        <button type="submit">{{__('messages.register')}}</button>
     </form>
 
 </body>
